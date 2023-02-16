@@ -1,0 +1,23 @@
+.dragon-card {
+  border-radius: 1rem;
+}
+.dragon-card h1 {
+  text-transform: uppercase;
+}
+.dragon-card div {
+  font-size: 3rem;
+}
+
+.fire {
+  background-color: crimson;
+}
+.water {
+  background-color: dodgerblue;
+}
+.air {
+  background-color: linen;
+  color: black;
+}
+.earth {
+  background-color: sienna;
+}
