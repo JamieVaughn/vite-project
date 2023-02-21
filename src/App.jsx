@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 // import './App.css'
 import { Main } from './components/main'
 import { Layout } from './components/Layout'
