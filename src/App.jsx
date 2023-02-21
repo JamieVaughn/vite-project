@@ -1,39 +1,39 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+// import './App.css'
+import { Main } from './components/main'
+import { Layout } from './components/Layout'
+import { MyContent } from './components/myContent'
 import { DragonCard } from './components/dragonCard'
-import { MyDice } from './components/dice'
 
-
-
-const EventComponent = props => {
-  const [clicks, setClicks] = useState(0)
+function App() {
+  const [dragons, setDragons] = useState([{
+    type: 'fire',
+    icon: '🐉'
+  }])
   return (
-    <button onClick={() => setClicks(clicks+1)}>
-      Clicks: {clicks}
-    </button>
+    <Layout setDragons={setDragons}>
+      {/* <Main>
+        <section id="Profile">New Profile Page</section>
+      </Main> */}
+      <main>
+        {
+          dragons.map((dragon, i) => {
+            return <DragonCard 
+                      key={dragon.type+i}
+                      type={dragon.type} 
+                      icon={dragon.icon} />
+          })
+        }
+      </main>
+    </Layout>
   )
 }
 
-function App() {
-
+export function OtherApp() {
   return (
-    <div className="App">
-      <MyDice max={6}/>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <EventComponent />
-     <DragonCard type={'fire'} icon={'🐉'}/>
-     <DragonCard type={'water'} icon={'🐉'}/>
-     <DragonCard type={'air'} icon={'🐉'}/>
-     <DragonCard type={'earth'} icon={'😀'}/>
-    </div>
+    <Layout>
+      <main>Other content</main>
+    </Layout>
   )
 }
 
