@@ -4,6 +4,8 @@ import { Main } from './components/main'
 import { Layout } from './components/Layout'
 import { MyContent } from './components/myContent'
 import { DragonCard } from './components/dragonCard'
+import { UserListApi } from './components/userListApi'
+import { UncontrolledForm, ControlledForm } from './components/myForms'
 
 function App() {
   const [dragons, setDragons] = useState([{
@@ -24,6 +26,12 @@ function App() {
                       icon={dragon.icon} />
           })
         }
+        <hr />
+        <UserListApi />
+        <hr />
+        <UncontrolledForm />
+        <hr />
+        <ControlledForm />
       </main>
     </Layout>
   )

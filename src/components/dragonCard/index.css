@@ -1,5 +1,11 @@
 .dragon-card {
   border-radius: 1rem;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
 }
 .dragon-card h1 {
   text-transform: uppercase;
